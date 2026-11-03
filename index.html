@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Northstar — Sign in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="visual-panel" aria-label="Product introduction">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>northstar</span>
+      </div>
+      <div class="visual-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR WORKSPACE, IN SYNC</p>
+        <h1>Make room for<br><span>your best work.</span></h1>
+        <p class="visual-description">One calm place for your projects, your people, and your next big idea.</p>
+        <div class="orbit-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="orbit-core"><span class="core-star">✦</span></div>
+          <span class="orbit-node node-a">✦</span><span class="orbit-node node-b"></span><span class="orbit-node node-c">✧</span>
+        </div>
+      </div>
+      <div class="visual-footer">
+        <div class="avatar-stack" aria-hidden="true"><span>AM</span><span>JS</span><span>RK</span><span>+</span></div>
+        <div><strong>Built for teams that think ahead</strong><p>Thoughtful tools. Better momentum.</p></div>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <div class="mobile-brand brand">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>northstar</span>
+      </div>
+      <div class="form-wrap">
+        <div class="form-heading">
+          <p class="eyebrow">WELCOME BACK</p>
+          <h2>Sign in to your account</h2>
+          <p class="muted">Enter your details to continue to your workspace.</p>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="field-group">
+            <label for="email">Work email</label>
+            <div class="input-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"></rect><path d="m5 7 7 5.5L19 7"></path></svg>
+              <input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="username" inputmode="email" aria-describedby="emailError" required />
+            </div>
+            <p class="field-error" id="emailError" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group">
+            <div class="label-row"><label for="password">Password</label><button class="text-button" type="button" id="forgotButton">Forgot password?</button></div>
+            <div class="input-wrap">
+              <svg class="field-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10" width="15" height="10" rx="2.5"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+              <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" aria-describedby="passwordError strengthHint" required />
+              <button class="visibility-button" type="button" id="togglePassword" aria-label="Show password" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.3-6 9.5-6 9.5 6 9.5 6-3.3 6-9.5 6-9.5-6-9.5-6Z"></path><circle cx="12" cy="12" r="2.6"></circle></svg>
+              </button>
+            </div>
+            <p class="field-error" id="passwordError" aria-live="polite"></p>
+            <div class="strength-area" id="strengthArea" hidden>
+              <div class="strength-top"><span>Password strength</span><strong id="strengthLabel">Too weak</strong></div>
+              <div class="strength-track" aria-hidden="true"><span id="strengthBar"></span></div>
+              <p id="strengthHint" class="strength-hint">Use 8+ characters with a mix of character types.</p>
+            </div>
+          </div>
+
+          <div class="options-row">
+            <label class="checkbox-label"><input id="rememberMe" type="checkbox" /><span class="custom-checkbox"></span><span>Keep me signed in</span></label>
+          </div>
+
+          <div class="form-alert" id="formAlert" role="alert" hidden></div>
+          <button class="submit-button" id="submitButton" type="submit">
+            <span class="button-label">Sign in</span><span class="button-arrow" aria-hidden="true">→</span>
+          </button>
+          <p class="demo-note"><span class="info-icon">i</span> Demo mode: use any valid email and a password with 8+ characters.</p>
+        </form>
+
+        <div class="divider"><span></span><p>NEW TO NORTHSTAR?</p><span></span></div>
+        <button type="button" class="create-account" id="createAccountButton">Create an account <span aria-hidden="true">↗</span></button>
+        <p class="legal">By continuing, you agree to our <a href="#" class="local-link">Terms</a> and <a href="#" class="local-link">Privacy Policy</a>.</p>
+      </div>
+      <footer class="form-footer"><span>© 2026 Northstar, Inc.</span><a href="#" class="local-link">Help center ↗</a></footer>
+    </section>
+  </main>
+
+  <dialog id="infoDialog" class="info-dialog">
+    <div class="dialog-mark">✦</div><h3 id="dialogTitle">Coming soon</h3><p id="dialogMessage">This action is a demo placeholder.</p>
+    <button type="button" class="submit-button dialog-close" id="closeDialog">Got it</button>
+  </dialog>
+</body>
+</html>
